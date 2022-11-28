@@ -16,14 +16,23 @@ function App() {
   const PlaylistPicker = () => {
     const userChoice = range(userInput - 10, userInput + 10, 1)
     const res = radiohead.filter(song => userChoice.includes(Math.round(song.gloom_index)))
-    console.log(res.map(song => song.track_name))
+    return (
+      <>
+        {res.map(song =>
+          <>
+            <p>{song.track_name}</p>
+            <img width={"150px"} src={song.album_img} />
+          </>
+        )}
+      </>
+    )
   }
 
   PlaylistPicker()
 
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <h1>Radiohead Gloom Index</h1>
       <div>
         <ButtonGroup fullWidth={true} variant="contained" aria-label="outlined primary button group">
           <Button onClick={() => setUserInput(10)}>One</Button>
@@ -42,7 +51,7 @@ function App() {
           <Button onClick={() => setUserInput(100)}>Ten</Button>
         </ButtonGroup>
       </div>
-
+      <PlaylistPicker />
     </div>
   );
 }
