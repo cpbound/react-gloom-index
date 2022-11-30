@@ -1,9 +1,8 @@
-import './App.css';
+import './scss/App.scss';
 import { useState } from 'react';
 import gloomIndex from "./gloomIndex"
 import PlaylistPicker from "./components/PlaylistPicker"
 import ButtonPicker from "./components/ButtonPicker"
-
 
 import * as React from 'react';
 

@@ -1,0 +1,27 @@
+$primary-color: #F1f1f1;
+$accent-color: #E2DCC8;
+$secondary-color: #E84545;
+$tertiary-color: #100F0F;
+
+@font-face {
+  font-family: 'Acidic';
+  src: url('../assets/fonts/Acidic.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Plakatbau';
+  src: url('../assets/fonts/bdplakatt.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Deansgate';
+  src: url('../assets/fonts/DeansgateCondensed-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Microgramma';
+  src: url('../assets/fonts/Microgramma\ D\ Extended\ Bold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'OCRB';
+  src: url('../assets/fonts/OCRB\ Regular.ttf') format('truetype');
+}
