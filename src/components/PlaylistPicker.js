@@ -16,10 +16,10 @@ const PlaylistPicker = (props) => {
                 alt="album image"
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography gutterBottom variant="body2" component="div">
                 {song.track_name}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="caption" color="text.secondary">
                   {song.album_name}
                 </Typography>
               </CardContent>
