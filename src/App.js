@@ -14,18 +14,24 @@ function App() {
   const [userInput, setUserInput] = useState();
   const [currentPlaylist, setCurrentPlaylist] = useState([]);
 
-  // const newPlaylist = () => {
+  const newPlaylist = () => {
+    if (!userInput) {
+      console.log("Hello world")
+      console.log(userInput)
+    } else {
+      console.log("get fucked four eyes")
+    }
   //   const userChoice = range(userInput - 10, userInput + 10, 1);
   //   const newPlaylist = radiohead.filter((song) =>
   //     userChoice.includes(Math.round(song.gloom_index))
   //   );
-  //   setCurrentPlaylist(newPlaylist);
-  //   console.log(currentPlaylist);
-  //   return currentPlaylist;
-  // };
+  //   return setCurrentPlaylist(newPlaylist);
+  };
 
-  // newPlaylist();
+  newPlaylist()
+
   console.log(userInput)
+  console.log(currentPlaylist)
 
   return (
     <div className="App">

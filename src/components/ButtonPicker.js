@@ -5,7 +5,6 @@ import { Button } from "@mui/material";
 const ButtonPicker = (props) => {
   function buttonClicked(e) {
     e.preventDefault();
-    console.log("hello world");
   }
 
   return (
