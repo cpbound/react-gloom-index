@@ -1,9 +1,8 @@
 import "./scss/App.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import gloomIndex from "./gloomIndex";
 import PlaylistPicker from "./components/PlaylistPicker";
 import ButtonPicker from "./components/ButtonPicker";
-import PlaylistShuffle from "./components/PlaylistShuffle";
 import * as React from "react";
 
 const radiohead = gloomIndex.radiohead;
@@ -14,31 +13,29 @@ function App() {
   const [userInput, setUserInput] = useState();
   const [currentPlaylist, setCurrentPlaylist] = useState([]);
 
-  const newPlaylist = () => {
-    if (!userInput) {
-      console.log("Hello world")
-      console.log(userInput)
-    } else {
-      console.log("get fucked four eyes")
-    }
-  //   const userChoice = range(userInput - 10, userInput + 10, 1);
-  //   const newPlaylist = radiohead.filter((song) =>
-  //     userChoice.includes(Math.round(song.gloom_index))
-  //   );
-  //   return setCurrentPlaylist(newPlaylist);
-  };
+  const userChoice = range(userInput - 10, userInput + 10, 1);
+  const newPlaylist = radiohead.filter((song) =>
+    userChoice.includes(Math.round(song.gloom_index))
+  );
 
-  newPlaylist()
+  function shuffle() {
+    const shuffledPlaylist = currentPlaylist.sort(() => Math.random() - 0.5);
+    setCurrentPlaylist(shuffledPlaylist);
+  }
 
-  console.log(userInput)
-  console.log(currentPlaylist)
+  useEffect(() => {
+    setCurrentPlaylist(newPlaylist);
+  }, [userInput]);
 
   return (
     <div className="App">
       <h1>Radiohead Gloom Index</h1>
-      <h2>On a scale of 1 - 10, how are you feeling today?</h2>
-      <ButtonPicker userInput={setUserInput} />
-      <PlaylistShuffle playlist={currentPlaylist} />
+      <h2>On a scale of 😫0 - 10😆, how are you feeling today?</h2>
+      <ButtonPicker
+        userInput={setUserInput}
+        array={currentPlaylist}
+        shuffle={shuffle}
+      />
       <PlaylistPicker array={currentPlaylist} />
     </div>
   );
