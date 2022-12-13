@@ -18,12 +18,27 @@ function App() {
     userChoice.includes(Math.round(song.gloom_index))
   );
 
+  const randomize = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = array[i];
+
+        // Swap
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+};
+
   function shuffle() {
-    const shuffledPlaylist = currentPlaylist.sort(() => Math.random() - 0.5);
+    const shuffledPlaylist = randomize(currentPlaylist)
+    console.log(shuffledPlaylist)
     setCurrentPlaylist(shuffledPlaylist);
+    console.log(currentPlaylist)
   }
 
   useEffect(() => {
+    console.log('Updated state', newPlaylist, currentPlaylist)
     setCurrentPlaylist(newPlaylist);
   }, [userInput]);
 
@@ -31,11 +46,7 @@ function App() {
     <div className="App">
       <h1>Radiohead Gloom Index</h1>
       <h2>On a scale of 😫0 - 10😆, how are you feeling today?</h2>
-      <ButtonPicker
-        userInput={setUserInput}
-        array={currentPlaylist}
-        shuffle={shuffle}
-      />
+      <ButtonPicker userInput={setUserInput} array={currentPlaylist} shuffle={shuffle} />
       <PlaylistPicker array={currentPlaylist} />
     </div>
   );
