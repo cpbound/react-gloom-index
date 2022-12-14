@@ -4,6 +4,7 @@ import { Button } from "@mui/material";
 
 const ButtonPicker = (props) => {
   function buttonClicked(e) {
+    props.playlist();
     e.preventDefault();
   }
 
@@ -17,8 +18,8 @@ const ButtonPicker = (props) => {
         >
           <Button
             onClick={(e) => {
-              buttonClicked(e);
               props.userInput(0);
+              buttonClicked(e);
             }}
           >
             Zero😫
@@ -113,14 +114,14 @@ const ButtonPicker = (props) => {
           </Button>
         </ButtonGroup>
       </div>
-      <Button
+      {/* <Button
         onClick={(e) => {
           buttonClicked(e);
           props.shuffle();
         }}
       >
         Shuffle!
-      </Button>
+      </Button> */}
     </>
   );
 };
