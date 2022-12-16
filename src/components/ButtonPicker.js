@@ -9,7 +9,7 @@ const ButtonPicker = (props) => {
   }
 
   return (
-    <>
+    <div className="all-buttons">
       <div className="button-group">
         <ButtonGroup
           fullWidth={true}
@@ -122,7 +122,7 @@ const ButtonPicker = (props) => {
       >
         Shuffle!
       </Button> */}
-    </>
+    </div>
   );
 };
 

@@ -5,6 +5,7 @@ import PlaylistPicker from "./components/PlaylistPicker";
 import ButtonPicker from "./components/ButtonPicker";
 import * as React from "react";
 
+
 const radiohead = gloomIndex.radiohead;
 const range = (start, stop, step) =>
   Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + i * step);
@@ -21,30 +22,9 @@ function App() {
     setCurrentPlaylist(newPlaylist);
   };
 
-  // const randomize = (array) => {
-  //   for (let i = array.length - 1; i > 0; i--) {
-  //     const j = Math.floor(Math.random() * (i + 1));
-  //     const temp = array[i];
-
-  //     // Swap
-  //     array[i] = array[j];
-  //     array[j] = temp;
-  //   }
-  //   return array;
-  // };
-
-  // // function shuffle() {
-  // //   const shuffledPlaylist = randomize(currentPlaylist);
-  // //   console.log(shuffledPlaylist);
-  // //   setCurrentPlaylist(shuffledPlaylist);
-  // //   console.log(currentPlaylist);
-  // // }
-
   useEffect(() => {
-    console.log("Hello")
-    playlist()
+    playlist();
   }, [userInput]);
-
 
   return (
     <div className="App">
