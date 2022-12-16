@@ -10,6 +10,7 @@ Because Radiohead are a good bunch of lads and listening to sad songs when your 
 # Will it do anything else?
 I dunno. Maybe? Time permitting I might come back to this and implement all of this jazz...
 1. Responsive UI - It probably needs this more than anything to be fair since it sucks on mobile. DON'T LOOK AT IT ON MOBILE YET.
+2. Test suite - This would be more than lovely!
 2. Playlist functionality - Like search or shuffle or narrow down or some bollocks like that
 3. Spotify integration - Because playing with APIs is fun
 4. Extended Radiohead Backcatalogue - currently the Gloom Index data set only covers Radiohead albums. Imagine the possibilities if you included B-Sides or single only releases like that awful remix of Creep! But not Pop is Dead. Never pop is dead
