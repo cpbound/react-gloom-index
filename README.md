@@ -5,10 +5,14 @@
 How awful are you feeling on a scale of 1 to 10 today? Well, tell this application and it'll list all of the Radiohead songs that a roughly as bleak as you're currently feeling.
 
 # But why?
-Because Radiohead are a good bunch of lads and listening to sad songs when your sad is the best medicine for the blues. IN ADDITION, this was a quick little playground for me to experiment with React and MaterialUI.
+Because Radiohead are a good bunch of lads and listening to sad songs when your sad is the best medicine for the blues. IN ADDITION, this was a quick little playground for me to experiment with ES6, React and MaterialUI.
 
 # Will it do anything else?
-I dunno. Maybe? Maybe I'll add features to narrow down searches or export to Spotify or something like that. Who knows? Certainly not me since I'm still learning what React and MUI can do so we'll see what happens.
+I dunno. Maybe? Time permitting I might come back to this and implement all of this jazz...
+1. Responsive UI - It probably needs this more than anything to be fair since it sucks on mobile. DON'T LOOK AT IT ON MOBILE YET.
+2. Playlist functionality - Like search or shuffle or narrow down or some bollocks like that
+3. Spotify integration - Because playing with APIs is fun
+4. Extended Radiohead Backcatalogue - currently the Gloom Index data set only covers Radiohead albums. Imagine the possibilities if you included B-Sides or single only releases like that awful remix of Creep! But not Pop is Dead. Never pop is dead
 
 ### Things I used ###
 
