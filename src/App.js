@@ -29,7 +29,7 @@ function App() {
 
   useEffect(() => {
     playlist();
-  }, [userInput]);
+  },);
 
   return (
     <div className="App">
